@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+<color name="gray_600">#807777</color>
+  <color name="gray_400">#c4c4c4</color>
+  <color name="amber_600">#ffb700</color>
+  <color name="yellow_900">#f57f17</color>
+  <color name="light_blue_600">#079fe0</color>
+  <color name="pink_500">#e91e63</color>
+  <color name="black_900_3f">#3f000000</color>
+  <color name="white_A700">#ffffff</color>
+  <color name="green_500">#4caf50</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="_bg___2_ingreso_a_la_app_ek2_color">#079FE0</color>
+    <color name="application_name_color">#FFFFFF</color>
+    <color name="load_color">#FFB700</color>
+    <color name="text_loading_container_color">#ffffff</color>
+    <color name="loading_ek1_color">#D0D0D0</color>
+
+
+    <color name="_bg___3_pantalla_principal_ek2_color">#FFFFFF</color>
+    <color name="logro1_color">#8880E6</color>
+    <color name="ellipse_6_color">#617881</color>
+    <color name="logro1_ek1_color">#079FE0</color>
+    <color name="ellipse_6_ek1_color">#807777</color>
+    <color name="logro1_ek2_color">#FFB700</color>
+    <color name="logro1_ek3_color">#4CAF50</color>
+    <color name="ellipse_6_ek3_color">#FFD788</color>
+    <color name="shadow_color">#000000</color>
+    <color name="logro1_ek4_color">#E91E63</color>
+    <color name="ellipse_6_ek4_color">#B7BDCA</color>
+    <color name="logro1_ek5_color">#88AB01</color>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "381991540404",
+    "project_id": "appaei",
+    "storage_bucket": "appaei.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381991540404:android:3cb79400aee48bc993e9e1",
+        "android_client_info": {
+          "package_name": "com.example.appaei"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB9ND6yzd8kvXg1ZWKMhGMFfSzKxs1vp8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

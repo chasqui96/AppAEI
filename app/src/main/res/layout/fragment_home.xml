@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingTop="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/Linear1"
+                    android:layout_width="match_parent"
+                    android:layout_height="178dp"
+                    android:layout_marginBottom="43dp"
+                    android:background="@drawable/vector_7"
+                    android:orientation="vertical"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="48dp">
+
+                    <!-- Primer FrameLayout con iconos -->
+                    <FrameLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="start|top"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="27dp"> <!-- Cambié 'left' por 'start' para compatibilidad -->
+
+                        <!-- Fondo circular (Imagen circular) -->
+                        <ImageView
+                            android:id="@+id/container_button_lateral_menu_ellipse"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/container_button_lateral_menu_ellipse"
+                            android:scaleType="centerInside" />
+
+                        <!-- Imagen pequeña dentro del círculo -->
+                        <ImageView
+                            android:id="@+id/container_button_lateral_menu_ep_menu"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/container_button_lateral_menu_ep_menu" />
+
+                    </FrameLayout>
+
+                    <!-- Imagen principal (Debajo del FrameLayout) -->
+
+                    <!-- Texto debajo de la imagen -->
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        android:text="Aprendamos Juntos"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+
+                   <!-- <ImageView
+                        android:layout_width="104dp"
+                        android:layout_height="108dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bichito2_1" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Linear4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="49dp"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <LinearLayout
+                        android:id="@+id/Linear5"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangle_bg_amber_600_radius_20"
+                        android:elevation="4dp"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="22dp"
+                        android:paddingVertical="17dp">
+
+                        <FrameLayout
+                            android:id="@+id/Frame1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="9dp">
+
+                            <!-- Imagen 1 -->
+                            <ImageView
+                                android:id="@+id/imaga5"
+                                android:layout_width="86dp"
+                                android:layout_height="77dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ellipse_6_ek2" />
+
+                            <!-- Imagen 2 (Superpuesta) -->
+                            <ImageView
+                                android:id="@+id/imaga6"
+                                android:layout_width="match_parent"
+                                android:layout_height="87dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/_5_1" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   Los colores"
+                            android:textColor="#807777"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:id="@+id/Linear6"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/logro1_ek3_shape"
+                        android:elevation="4dp"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="25dp"
+                        android:paddingVertical="17dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <FrameLayout
+                            android:id="@+id/Frame2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="9dp">
+
+                            <ImageView
+                                android:id="@+id/imaga7"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_marginBottom="8dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ellipse_6_ek3_shape" />
+
+                            <ImageView
+                                android:id="@+id/imaga8"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_marginBottom="9dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/_6_1" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/text4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Las vocales"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Linear7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginBottom="26dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/Linear8"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/logro1_shape"
+                        android:elevation="4dp"
+                        android:orientation="vertical"
+                        android:paddingVertical="17dp"
+                        android:paddingRight="15dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <FrameLayout
+                            android:id="@+id/Frame3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="9dp">
+
+                            <ImageView
+                                android:id="@+id/imaga9"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_marginStart="27dp"
+                                android:layout_marginBottom="6dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ellipse_6_ek1_shape" />
+
+                            <ImageView
+                                android:id="@+id/imaga10"
+                                android:layout_width="83dp"
+                                android:layout_height="73dp"
+                                android:layout_marginStart="27dp"
+                                android:layout_marginBottom="6dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/animales__1" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/text5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:text="Los animales"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:id="@+id/Linear9"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/logro1_ek1_shape"
+                        android:elevation="4dp"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="17dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <FrameLayout
+                            android:id="@+id/Frame4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="9dp">
+
+                            <ImageView
+                                android:id="@+id/imaga11"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_marginBottom="2dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ellipse_6_ek1_shape" />
+
+                            <ImageView
+                                android:id="@+id/imaga12"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_marginBottom="2dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/colorful_cute_playful_illustration_abc_kids_daycare_logo__3__1" />
+
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/text6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="    Higiene"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Linear10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/Linear11"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/logro1_ek4_shape"
+                        android:elevation="4dp"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="22dp"
+                        android:paddingVertical="17dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <FrameLayout
+                            android:id="@+id/Frame5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="9dp">
+
+                            <ImageView
+                                android:id="@+id/imaga13"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_marginBottom="8dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ellipse_6_ek4_shape" />
+
+                            <ImageView
+                                android:id="@+id/Imaga14"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_marginBottom="8dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/colorful_cute_playful_illustration_abc_kids_daycare_logo__4__1" />
+
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/text7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Los sentidos"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:id="@+id/Linear12"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/logro1_ek5_shape"
+                        android:elevation="4dp"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="13dp"
+                        android:paddingVertical="17dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <FrameLayout
+                            android:id="@+id/Frame6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="9dp">
+
+                            <ImageView
+                                android:id="@+id/imaga15"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_marginBottom="7dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ellipse_6_shape" />
+
+                            <ImageView
+                                android:id="@+id/Imaga16"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_marginBottom="7dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/_12_1" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/text13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  Las emociones"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
