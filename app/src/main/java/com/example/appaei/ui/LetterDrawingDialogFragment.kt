@@ -65,7 +65,16 @@ class LetterDrawingDialogFragment : DialogFragment() {
     }
     override fun onStart() {
         super.onStart()
-        // Ajustar el tamaño del diálogo
-        dialog?.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+
+        // Obtener las dimensiones de la pantalla
+        val displayMetrics = resources.displayMetrics
+        val screenWidth = displayMetrics.widthPixels
+        val screenHeight = displayMetrics.heightPixels
+
+        // Ajustar el tamaño del diálogo usando un porcentaje de la pantalla
+        val dialogWidth = (screenWidth * 0.85).toInt() // 85% del ancho de la pantalla
+        val dialogHeight = (screenHeight * 0.65).toInt() // 65% del alto de la pantalla
+
+        dialog?.window?.setLayout(dialogWidth, dialogHeight)
     }
 }

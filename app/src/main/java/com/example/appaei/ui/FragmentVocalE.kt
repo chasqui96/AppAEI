@@ -24,10 +24,31 @@ class FragmentVocalE : Fragment() {
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_vocal_e, container, false)
+
+        val playButton: Button = view.findViewById(R.id.image_start_button)
+
+        // Inicializa el MediaPlayer con el archivo de sonido
+        mediaPlayer = MediaPlayer.create(context, R.raw.letra_e)
+
+        // Configura el evento onClick del botón
+        playButton.setOnClickListener {
+            if (isPlaying) {
+                // Si el sonido está reproduciéndose, deténlo
+                mediaPlayer?.pause()  // Pausa el sonido
+                mediaPlayer?.seekTo(0)  // Reinicia el sonido desde el principio si se reproduce de nuevo
+                playButton.text = "  Reproducir"  // Cambia el texto del botón
+            } else {
+                // Si el sonido no está reproduciéndose, inícialo
+                mediaPlayer?.start()  // Reproduce el sonido
+                playButton.text = "  Detener"  // Cambia el texto del botón
+            }
+            isPlaying = !isPlaying  // Cambia el estado
+        }
+
         // Botón para abrir el diálogo de dibujo para la letra E
         val openDialogButtonE: Button = view.findViewById(R.id.open_dialog_button_e)
         openDialogButtonE.setOnClickListener {
-            val dialog = LetterDrawingDialogFragment.newInstance(R.drawable.imagen_letra_e) // Cambia por la imagen de la letra E
+            val dialog = LetterDrawingDialogFragment.newInstance(R.drawable.letra_e) // Cambia por la imagen de la letra E
             dialog.show(requireActivity().supportFragmentManager, "LetterDrawingDialog")
         }
         return view

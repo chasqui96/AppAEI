@@ -43,8 +43,14 @@ class MenuActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.vector)// Usa tu nuevo ícono aquí
-        val linearLayout = findViewById<LinearLayout>(R.id.Linear4)
-        linearLayout.setOnClickListener {
+        val irVocales = findViewById<LinearLayout>(R.id.Linear6)
+        irVocales.setOnClickListener {
+            // Navegar a la actividad de carrusel
+            val intent = Intent(this, FramentVocales::class.java)
+            startActivity(intent)
+        }
+        val irHigiene = findViewById<LinearLayout>(R.id.Linear9)
+        irHigiene.setOnClickListener {
             // Navegar a la actividad de carrusel
             val intent = Intent(this, FramentVocales::class.java)
             startActivity(intent)

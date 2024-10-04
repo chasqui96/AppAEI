@@ -18,7 +18,7 @@ class DrawingView @JvmOverloads constructor(
     private val paint: Paint = Paint().apply {
         color = Color.RED // Color del dibujo
         style = Paint.Style.STROKE // Estilo de trazo
-        strokeWidth = 10f // Grosor del trazo
+        strokeWidth = 15f // Grosor del trazo
     }
     private val path = android.graphics.Path() // Trayectoria del dibujo
 
@@ -33,7 +33,10 @@ class DrawingView @JvmOverloads constructor(
 
         // Dibujar la imagen de fondo
         bitmap?.let {
-            canvas.drawBitmap(it, 0f, 0f, null)
+            val width = width
+            val height = height
+            val scaledBitmap = Bitmap.createScaledBitmap(it, width, height, true)
+            canvas.drawBitmap(scaledBitmap, 0f, 0f, null)
         }
 
         // Dibujar la trayectoria

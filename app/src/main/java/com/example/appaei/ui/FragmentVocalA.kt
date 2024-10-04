@@ -45,7 +45,7 @@ class FragmentVocalA : Fragment() {
         // Botón para abrir el diálogo de dibujo para la letra A
         val openDialogButtonA: Button = view.findViewById(R.id.open_dialog_button_a)
         openDialogButtonA.setOnClickListener {
-            val dialog = LetterDrawingDialogFragment.newInstance(R.drawable.drawable_image_14) // Cambia por la imagen de la letra A
+            val dialog = LetterDrawingDialogFragment.newInstance(R.drawable.letra_a) // Cambia por la imagen de la letra A
             dialog.show(requireActivity().supportFragmentManager, "LetterDrawingDialog")
         }
 
