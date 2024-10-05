@@ -109,6 +109,7 @@ dependencies {
     implementation("io.insert-koin:koin-android:3.x.x") // For Android projects
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.0.0")
 
 
 }

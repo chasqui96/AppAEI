@@ -8,19 +8,14 @@ import com.example.appaei.R
 class FragmentHigiene : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_vocales)
+        setContentView(R.layout.fragment_higiene)
 
         // Crea una lista de fragmentos para cada vocal
         val fragments = listOf(
-            FragmentVocalA(),
-            FragmentVocalE(),
-            FragmentVocalI(),
-            FragmentVocalO(),
-            FragmentVocalU()
-            /*FragmentVocalI(),
-            FragmentVocalE(),
-            FragmentVocalO(),
-            FragmentVocalU()*/
+            FragmentHigieneUno(),
+            FragmentHigieneDos(),
+            FragmentHigieneTres(),
+            FragmentHigieneCuatro()
         )
 
         // Configura el ViewPager con el adaptador

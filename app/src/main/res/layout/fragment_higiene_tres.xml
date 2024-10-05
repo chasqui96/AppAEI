@@ -9,24 +9,25 @@
     android:background="@drawable/drawable_shape">
 
     <ImageView
-        android:layout_width="414dp"
-        android:layout_height="211dp"
+        android:id="@+id/image_vector"
+        android:layout_width="410dp"
+        android:layout_height="197dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/drawable_image" />
-
+        android:src="@drawable/image_vector" />
 
     <TextView
-        android:id="@+id/text_vocales"
+        android:id="@+id/container_quiz_info_section"
         android:layout_width="179dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="104dp"
-        android:layout_marginTop="35dp"
+        android:layout_height="60.24dp"
+        android:layout_marginLeft="101dp"
+        android:layout_marginTop="33.38dp"
+        android:layout_marginBottom="-1.62dp"
         android:layout_gravity="top|left"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
-        android:maxLines="1"
-        android:singleLine="true"
-        android:text="Las vocales"
+        android:lineHeight="30.24dp"
+        android:maxLines="2"
+        android:text="Hábitos de Higiene"
         android:textColor="#FFFFFFFF"
         android:textSize="24dp" />
 
@@ -577,6 +578,8 @@
             android:textSize="14dp" />
     </FrameLayout>
 
+
+
     <FrameLayout
         android:id="@+id/container_footer"
         android:layout_width="match_parent"
@@ -588,7 +591,7 @@
             android:id="@+id/img_rectangle"
             android:layout_width="600dp"
             android:layout_height="match_parent"
-            android:background="@drawable/img_rectangle"
+            android:background="@drawable/image_rectangle3"
             android:scaleType="centerCrop" />
 
         <FrameLayout
@@ -608,15 +611,7 @@
                 app:backgroundTint="@null"
                 android:scaleType="centerCrop" />
 
-            <ImageView
-                android:id="@+id/img_arrow_right_thick"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="137dp"
-                android:layout_marginTop="11dp"
-                android:layout_marginRight="137dp"
-                android:layout_marginBottom="11dp"
-                android:scaleType="centerInside" />
+
         </FrameLayout>
 
         <FrameLayout
@@ -638,11 +633,10 @@
                 android:includeFontPadding="false"
                 android:maxLines="1"
                 android:singleLine="true"
-                android:text="Estudiemos"
+                android:text="SIGUIENTE"
                 android:textColor="#FFFFFFFF"
                 android:textSize="16dp" />
         </FrameLayout>
-
         <ImageView
             android:id="@+id/img_reading"
             android:layout_width="36dp"
@@ -651,100 +645,178 @@
             android:layout_marginLeft="105dp"
             android:layout_marginTop="35dp"
             android:scaleType="centerInside"
-            android:src="@drawable/img_reading" />
+            android:src="@drawable/drawable_image_14" />
+
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/container_character"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="557dp"
+        android:layout_gravity="top|left">
+
+        <Button
+            android:id="@+id/image_start_button_uno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/image_start_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Reproducir"
+            android:textColor="#FF817777"
+            app:backgroundTint="@null" />
+
+        <ImageView
+            android:layout_width="23.99dp"
+            android:layout_height="28.41dp"
+            android:layout_marginLeft="16.54dp"
+            android:layout_marginTop="2.37dp"
+            android:layout_marginBottom="1.58dp"
+            android:layout_gravity="left"
+            android:scaleType="centerInside"
+            android:src="@drawable/drawable_image_15" />
+    </FrameLayout>
+    <ImageView
+        android:layout_width="29dp"
+        android:layout_height="27dp"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="562dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/drawable_image_15" />
+    <FrameLayout
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="557dp"
+        android:layout_gravity="top|left">
+
+        <Button
+            android:id="@+id/image_start_button_dos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/image_start_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="  Reproducir"
+            android:textColor="#FF817777"
+            app:backgroundTint="@null" />
+
+
+
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="29dp"
+        android:layout_height="27dp"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="562dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/drawable_image_15" />
+    <TextView
+        android:layout_width="109dp"
+        android:layout_height="68.36dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="207.82dp"
+        android:layout_marginBottom="-11.18dp"
+        android:layout_gravity="top|left"
+        android:gravity="left|center_vertical"
+        android:includeFontPadding="false"
+        android:lineHeight="22.68dp"
+        android:maxLines="3"
+        android:text="Lavar la cara"
+        android:textColor="#FF817777"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="143dp"
+        android:layout_height="68.36dp"
+        android:layout_marginLeft="212dp"
+        android:layout_marginTop="208.82dp"
+        android:layout_marginBottom="-11.18dp"
+        android:layout_gravity="top|left"
+        android:gravity="left|center_vertical"
+        android:includeFontPadding="false"
+        android:lineHeight="22.68dp"
+        android:maxLines="3"
+        android:text="Cepillar los Dientes"
+        android:textColor="#FF817777"
+        android:textSize="18dp" />
+
+    <FrameLayout
+        android:id="@+id/container_character4"
         android:layout_width="104dp"
         android:layout_height="109dp"
-        android:layout_marginLeft="238dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginLeft="237dp"
+        android:layout_marginTop="9dp"
         android:layout_gravity="top|left">
 
         <ImageView
-            android:id="@+id/image_character_bichito"
+            android:id="@+id/image_bichito"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/image_character_bichito" />
+            android:src="@drawable/image_bichito" />
 
         <ImageView
-            android:id="@+id/image_character_shadow"
+            android:id="@+id/image_shadow"
             android:layout_width="54.02dp"
             android:layout_height="2.53dp"
             android:layout_marginLeft="37.09dp"
             android:layout_marginRight="12.9dp"
             android:layout_marginTop="99.71dp"
             android:layout_marginBottom="6.76dp"
-            android:background="@drawable/image_character_shadow"
+            android:background="@drawable/image_shadow"
             android:scaleType="centerInside" />
     </FrameLayout>
 
+    <ImageView
+        android:layout_width="149.14dp"
+        android:layout_height="227dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="283dp"
+        android:layout_gravity="top|left"
+        android:scaleType="centerInside"
+        android:src="@drawable/lavar_cara" />
+
     <FrameLayout
+        android:id="@+id/container_button_lateral_menu"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginLeft="23dp"
+        android:layout_marginLeft="21dp"
         android:layout_marginTop="27dp"
         android:layout_gravity="top|left">
 
         <ImageView
-            android:id="@+id/container_button_lateral_menu_ellipse"
+            android:id="@+id/image_ellipse4"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_gravity="top|left"
-            android:background="@drawable/container_button_lateral_menu_ellipse"
+            android:background="@drawable/image_ellipse4"
             android:scaleType="centerInside" />
 
         <ImageView
-            android:id="@+id/container_button_lateral_menu_ep_menu"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:id="@+id/image_ep_menu"
+            android:layout_width="32dp"
+            android:layout_height="34dp"
+            android:layout_gravity="top|left"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
-            android:layout_gravity="top|left"
             android:scaleType="centerInside"
-            android:src="@drawable/container_button_lateral_menu_ep_menu" />
+            android:src="@drawable/image_ep_menu" />
     </FrameLayout>
 
+
     <ImageView
-        android:layout_width="393dp"
-        android:layout_height="347dp"
-        android:layout_gravity="top|left"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="199dp"
+        android:layout_width="222dp"
+        android:layout_height="222dp"
+        android:layout_marginLeft="164dp"
+        android:layout_marginRight="-26dp"
+        android:layout_marginTop="301dp"
+        android:layout_marginBottom="277dp"
         android:scaleType="centerInside"
-        android:src="@drawable/imagen_letra_a" />
-
-    <FrameLayout
-        android:id="@+id/container_button_login"
-        android:layout_width="180dp"
-        android:layout_height="41dp"
-        android:layout_marginLeft="166dp"
-        android:layout_marginTop="596dp"
-        android:layout_gravity="top|left"
-        android:background="@drawable/container_button_login">
-
-        <Button
-            android:id="@+id/image_start_button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="    Reproducir"
-            app:backgroundTint="@null"
-            android:background="@drawable/image_start_button"
-            android:textColor="#FF817777"
-         />
-
-
-    </FrameLayout>
-    <ImageView
-        android:layout_width="29dp"
-        android:layout_height="36dp"
-        android:layout_marginLeft="184dp"
-        android:layout_marginTop="598dp"
-        android:layout_gravity="top|left"
-        android:scaleType="centerInside"
-        android:src="@drawable/drawable_image_15" />
-
-
+        android:src="@drawable/cepillarse_dos" />
 </FrameLayout>

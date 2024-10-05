@@ -52,7 +52,7 @@ class MenuActivity : AppCompatActivity() {
         val irHigiene = findViewById<LinearLayout>(R.id.Linear9)
         irHigiene.setOnClickListener {
             // Navegar a la actividad de carrusel
-            val intent = Intent(this, FramentVocales::class.java)
+            val intent = Intent(this, FragmentHigiene::class.java)
             startActivity(intent)
         }
     }

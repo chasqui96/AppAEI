@@ -24,6 +24,11 @@
             android:exported="false"
             android:label="@string/title_activity_menu"
             android:theme="@style/Theme.MyApp.NoActionBar" />
+        <activity
+            android:name=".ui.FragmentHigiene"
+            android:exported="false"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/Theme.MyApp.NoActionBar" />
         <!-- Actividad principal -->
         <activity
             android:name=".ui.LoginpageActivity"
