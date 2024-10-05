@@ -1,20 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="wrap_content">
 
-    <!-- VideoView donde se reproducirá el video -->
     <VideoView
         android:id="@+id/video_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
 
-    <!-- Botón para reproducir o pausar el video -->
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="1000dp"
+        android:layout_height="1000dp"
+        android:visibility="gone" />
+
     <Button
         android:id="@+id/play_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reproducir Video" />
-</LinearLayout>
+        android:text="Reproducir Video"
+        android:layout_gravity="center" />
+</FrameLayout>
