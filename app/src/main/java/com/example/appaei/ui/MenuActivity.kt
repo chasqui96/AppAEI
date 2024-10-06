@@ -55,6 +55,12 @@ class MenuActivity : AppCompatActivity() {
             val intent = Intent(this, FragmentHigiene::class.java)
             startActivity(intent)
         }
+        val irColores = findViewById<LinearLayout>(R.id.Linear5)
+        irColores.setOnClickListener {
+            // Navegar a la actividad de carrusel
+            val intent = Intent(this, FragmentColores::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

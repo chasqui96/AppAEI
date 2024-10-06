@@ -105,7 +105,10 @@
                         android:elevation="4dp"
                         android:orientation="vertical"
                         android:paddingHorizontal="22dp"
-                        android:paddingVertical="17dp">
+                        android:paddingVertical="17dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        >
 
                         <FrameLayout
                             android:id="@+id/Frame1"

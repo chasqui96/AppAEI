@@ -56,7 +56,7 @@ class VideoDialogFragment : DialogFragment() {
             webView.visibility = View.GONE
             val videoUri = Uri.parse(videoUriString)
             videoView.setVideoURI(videoUri)
-            videoView.start()
+
 
             playButton.setOnClickListener {
                 if (videoView.isPlaying) {
@@ -78,7 +78,11 @@ class VideoDialogFragment : DialogFragment() {
                 startActivity(intent)
             }
         }
-
+        // Botón para cerrar el diálogo
+        val closeButton: Button = view.findViewById(R.id.close_button)
+        closeButton.setOnClickListener {
+            dismiss() // Cerrar el diálogo
+        }
         return view
     }
 
