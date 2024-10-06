@@ -34,6 +34,11 @@
             android:exported="false"
             android:label="@string/title_activity_menu"
             android:theme="@style/Theme.MyApp.NoActionBar" />
+        <activity
+            android:name=".ui.FragmentSentidos"
+            android:exported="false"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/Theme.MyApp.NoActionBar" />
         <!-- Actividad principal -->
         <activity
             android:name=".ui.LoginpageActivity"
