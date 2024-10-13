@@ -67,6 +67,18 @@ class MenuActivity : AppCompatActivity() {
             val intent = Intent(this, FragmentSentidos::class.java)
             startActivity(intent)
         }
+        val irEmociones = findViewById<LinearLayout>(R.id.Linear12)
+        irEmociones.setOnClickListener {
+            // Navegar a la actividad de carrusel
+            val intent = Intent(this, FragmentEmociones::class.java)
+            startActivity(intent) 
+        }
+        val irAnimales= findViewById<LinearLayout>(R.id.Linear8)
+        irAnimales.setOnClickListener {
+            // Navegar a la actividad de carrusel
+            val intent = Intent(this, FragmentAnimales::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

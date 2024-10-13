@@ -39,6 +39,15 @@
             android:exported="false"
             android:label="@string/title_activity_menu"
             android:theme="@style/Theme.MyApp.NoActionBar" />
+        <activity
+            android:name=".ui.FragmentEmociones"
+            android:exported="false"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/Theme.MyApp.NoActionBar" />
+        <activity
+            android:name=".ui.FragmentAnimales"
+            android:exported="false"
+            android:label="@string/title_activity_menu"/>
         <!-- Actividad principal -->
         <activity
             android:name=".ui.LoginpageActivity"

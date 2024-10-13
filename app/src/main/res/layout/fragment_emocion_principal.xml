@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_habitos_de_higiene"
+    android:layout_width="match_parent"
+    android:layout_height="800dp"
+    android:background="@drawable/container_habitos_de_higiene">
+
+    <ImageView
+        android:id="@+id/image_vector"
+        android:layout_width="410dp"
+        android:layout_height="197dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/drawable_amber" />
+
+    <TextView
+        android:id="@+id/container_quiz_info_section"
+        android:layout_width="147dp"
+        android:layout_height="60.24dp"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="101dp"
+        android:layout_marginTop="33.38dp"
+        android:layout_marginBottom="-1.62dp"
+        android:gravity="left|center_vertical"
+        android:includeFontPadding="false"
+        android:lineHeight="30.24dp"
+        android:maxLines="2"
+        android:text="Las Emociones"
+        android:textColor="#FFFFFFFF"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/text_importancia_de_la_higiene"
+        android:layout_width="277dp"
+        android:layout_height="27dp"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="208dp"
+        android:gravity="left|center_vertical"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Importancia de la Higiene"
+        android:textColor="#FF817777"
+        android:textSize="18dp" />
+
+    <FrameLayout
+        android:id="@+id/container_dialog_chart"
+        android:layout_width="272.57dp"
+        android:layout_height="168dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="258dp"
+        android:layout_gravity="top|left">
+
+        <ImageView
+            android:id="@+id/image_rectangle"
+            android:layout_width="match_parent"
+            android:layout_height="148.29dp"
+            android:layout_gravity="top"
+            android:background="@drawable/image_rectangle"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/container_polygon"
+            android:layout_width="22.29dp"
+            android:layout_height="24.86dp"
+            android:layout_marginLeft="89.14dp"
+            android:layout_marginTop="143.14dp"
+            android:layout_gravity="left"
+            android:scaleType="centerInside"
+            android:src="@drawable/container_polygon" />
+
+        <TextView
+            android:id="@+id/text_dialog_message"
+            android:layout_width="232dp"
+            android:layout_height="112dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="19.57dp"
+            android:gravity="left|top"
+            android:includeFontPadding="false"
+            android:lineHeight="17.64dp"
+            android:text="¡Hola Chicos! El día de hoy estaremos aprendiendo sobre las emociones y cómo las expresamos. ¡Vamos a explorar juntos este mundo tan interesante!"
+            android:textColor="#FF817777"
+            android:textSize="14dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_example_part"
+        android:layout_width="244dp"
+        android:layout_height="118dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="986dp"
+        android:layout_gravity="top|left">
+
+        <FrameLayout
+            android:id="@+id/container_suma"
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="29dp"
+            android:layout_marginBottom="23dp"
+            android:layout_gravity="left">
+
+            <TextView
+                android:id="@+id/text_suma"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="-3.5dp"
+                android:layout_marginBottom="-3.5dp"
+                android:layout_gravity="top"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="25"
+                android:textColor="#FF817777"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/text_suma1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="left"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="15"
+                android:textColor="#FF817777"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/text_suma_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="14dp"
+                android:layout_gravity="top|left"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="+"
+                android:textColor="#FF817777"
+                android:textSize="24dp" />
+
+            <ImageView
+                android:id="@+id/container_line"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="66dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/container_line" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/image_arrow"
+            android:layout_width="31dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="58dp"
+            android:layout_gravity="top|left"
+            android:scaleType="centerInside"
+            android:src="@drawable/image_arrow" />
+
+        <FrameLayout
+            android:id="@+id/container_suma_dividida"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="136dp"
+            android:layout_marginRight="61dp">
+
+            <TextView
+                android:id="@+id/text_suma_dividida"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="25.5dp"
+                android:layout_marginBottom="-3.5dp"
+                android:layout_gravity="top"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="2  "
+                android:textColor="#FF817777"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/text_suma_dividida1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="91.5dp"
+                android:layout_marginBottom="-3.5dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="4"
+                android:textColor="#FF817777"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/text_suma_dividida2"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="12dp"
+                android:layout_gravity="top"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="1"
+                android:textColor="#FFFFB800"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/text_suma_dividida_1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginBottom="33dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="1    "
+                android:textColor="#FF817777"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/text_suma_dividida_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="43dp"
+                android:layout_gravity="top|left"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="+"
+                android:textColor="#FF817777"
+                android:textSize="24dp" />
+
+            <ImageView
+                android:id="@+id/container_line1"
+                android:layout_width="39dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="95dp"
+                android:layout_marginBottom="23dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/container_line1" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/container_suma_dividida1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="197dp"
+            android:layout_marginTop="31dp">
+
+            <TextView
+                android:id="@+id/text_suma_dividida3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="-3.5dp"
+                android:layout_marginBottom="-3.5dp"
+                android:layout_gravity="top"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="5  "
+                android:textColor="#FF817777"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/text_suma_dividida4"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="60.5dp"
+                android:layout_marginBottom="-3.5dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="#FF817777"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/text_suma_dividida_5"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="-3dp"
+                android:layout_gravity="top"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="5    "
+                android:textColor="#FF817777"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/text_suma_dividida_plus1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="14dp"
+                android:layout_gravity="top|left"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="+"
+                android:textColor="#FF817777"
+                android:textSize="24dp" />
+
+            <ImageView
+                android:id="@+id/container_line2"
+                android:layout_width="39dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginBottom="23dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/container_line2" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_example_part1"
+        android:layout_width="260dp"
+        android:layout_height="95dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="1452dp"
+        android:layout_gravity="top|left">
+
+        <FrameLayout
+            android:id="@+id/container_suma1"
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left">
+
+            <TextView
+                android:id="@+id/text_suma2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="-3.5dp"
+                android:layout_marginBottom="-3.5dp"
+                android:layout_gravity="top"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="25"
+                android:textColor="#FF817777"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/text_suma3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="68.5dp"
+                android:layout_marginBottom="-3.5dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="40"
+                android:textColor="#FFFFB800"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/text_suma4"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="-3dp"
+                android:layout_gravity="top|left"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="15"
+                android:textColor="#FF817777"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/text_suma_plus1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="14dp"
+                android:layout_gravity="top|left"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="+"
+                android:textColor="#FF817777"
+                android:textSize="24dp" />
+
+            <ImageView
+                android:id="@+id/container_line3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="66dp"
+                android:layout_marginBottom="29dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/container_line3" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/image_arrow3"
+            android:layout_width="31dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="29dp"
+            android:layout_gravity="top|left"
+            android:scaleType="centerInside"
+            android:src="@drawable/image_arrow3" />
+
+        <LinearLayout
+            android:id="@+id/container_result_dividida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="144dp"
+            android:layout_marginRight="69dp"
+            android:layout_marginTop="10.5dp"
+            android:layout_marginBottom="-3.5dp"
+            android:layout_gravity="top"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="3.5dp"
+            android:paddingTop="3.5dp">
+
+            <TextView
+                android:id="@+id/text_result_dividida"
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="-3.5dp"
+                android:layout_marginBottom="-3.5dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="4"
+                android:textColor="#FF817777"
+                android:textSize="24dp" />
+
+            <ImageView
+                android:id="@+id/image_arrow1"
+                android:layout_width="22dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/image_arrow1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_result_dividida1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="213dp"
+            android:layout_marginTop="10.5dp"
+            android:layout_marginBottom="-3.5dp"
+            android:layout_gravity="top"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="3.5dp"
+            android:paddingTop="3.5dp">
+
+            <ImageView
+                android:id="@+id/image_arrow2"
+                android:layout_width="22dp"
+                android:layout_height="1dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/image_arrow2" />
+
+            <TextView
+                android:id="@+id/text_result_dividida1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-3.5dp"
+                android:layout_marginBottom="-3.5dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="#FF817777"
+                android:textSize="24dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_character"
+        android:layout_width="71dp"
+        android:layout_height="105dp"
+        android:layout_marginLeft="87dp"
+        android:layout_marginTop="859dp"
+        android:layout_gravity="top|left">
+
+        <ImageView
+            android:id="@+id/image_character"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_character" />
+
+        <ImageView
+            android:id="@+id/image_ellipse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="96dp"
+            android:background="@drawable/image_ellipse"
+            android:scaleType="centerCrop" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_character1"
+        android:layout_width="71dp"
+        android:layout_height="105dp"
+        android:layout_marginLeft="118dp"
+        android:layout_marginTop="1305dp"
+        android:layout_gravity="top|left">
+
+        <ImageView
+            android:id="@+id/image_character1"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_character1" />
+
+        <ImageView
+            android:id="@+id/image_ellipse1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="96dp"
+            android:background="@drawable/image_ellipse1"
+            android:scaleType="centerCrop" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_character2"
+        android:layout_width="71dp"
+        android:layout_height="105dp"
+        android:layout_marginLeft="102dp"
+        android:layout_marginTop="1757dp"
+        android:layout_gravity="top|left">
+
+        <ImageView
+            android:id="@+id/image_character2"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_character2" />
+
+        <ImageView
+            android:id="@+id/image_ellipse2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="96dp"
+            android:background="@drawable/image_ellipse2"
+            android:scaleType="centerCrop" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_character3"
+        android:layout_width="104dp"
+        android:layout_height="153.8dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="426dp"
+        android:layout_gravity="top|left">
+
+        <ImageView
+            android:id="@+id/image_character3"
+            android:layout_width="102.54dp"
+            android:layout_height="153.8dp"
+            android:layout_gravity="top|left"
+            android:scaleType="centerInside"
+            android:src="@drawable/bichito2_1" />
+
+        <ImageView
+            android:id="@+id/image_ellipse3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="13.18dp"
+            android:layout_marginTop="140.62dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/image_ellipse3"
+            android:scaleType="centerCrop" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_dialog_chart1"
+        android:layout_width="272.57dp"
+        android:layout_height="168dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="1137dp"
+        android:layout_gravity="top|left">
+
+        <ImageView
+            android:id="@+id/image_rectangle1"
+            android:layout_width="match_parent"
+            android:layout_height="148.29dp"
+            android:layout_gravity="top"
+            android:background="@drawable/image_rectangle1"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/container_polygon1"
+            android:layout_width="22.29dp"
+            android:layout_height="24.86dp"
+            android:layout_marginLeft="89.14dp"
+            android:layout_marginTop="143.14dp"
+            android:layout_gravity="left"
+            android:scaleType="centerInside"
+            android:src="@drawable/container_polygon1" />
+
+        <TextView
+            android:id="@+id/text_dialog_message1"
+            android:layout_width="232dp"
+            android:layout_height="119dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginRight="19.57dp"
+            android:layout_marginTop="13dp"
+            android:layout_gravity="top"
+            android:gravity="left|top"
+            android:includeFontPadding="false"
+            android:lineHeight="17.64dp"
+            android:text="Como el resultado de 5+5 es mayor que 9 entonces colocamos 0 en el resultado y el 1 que sobra  se lo sumamos al resultado de la suma que esta antes."
+            android:textColor="#FF817777"
+            android:textSize="14dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_dialog_chart2"
+        android:layout_width="272.57dp"
+        android:layout_height="168dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="1589dp"
+        android:layout_gravity="top|left">
+
+        <ImageView
+            android:id="@+id/image_rectangle2"
+            android:layout_width="match_parent"
+            android:layout_height="148.29dp"
+            android:layout_gravity="top"
+            android:background="@drawable/image_rectangle2"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/container_polygon2"
+            android:layout_width="22.29dp"
+            android:layout_height="24.86dp"
+            android:layout_marginLeft="89.14dp"
+            android:layout_marginTop="143.14dp"
+            android:layout_gravity="left"
+            android:scaleType="centerInside"
+            android:src="@drawable/container_polygon2" />
+
+        <TextView
+            android:id="@+id/text_dialog_message2"
+            android:layout_width="232dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginRight="19.57dp"
+            android:layout_marginTop="13dp"
+            android:layout_gravity="top"
+            android:gravity="left|top"
+            android:includeFontPadding="false"
+            android:lineHeight="17.64dp"
+            android:text="Finalmente unimos los dos resultados que nos dio  al realizar las dos sumas pequeñas lo cual da 40 el cual es el resultado de sumar 25 + 15. trata de realizar este truco mentalmente.\n"
+            android:textColor="#FF817777"
+            android:textSize="14dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_button_login"
+        android:layout_width="162dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="175dp"
+        android:layout_marginTop="539dp"
+        android:layout_gravity="top|left"
+        android:background="@drawable/container_button_login">
+
+        <Button
+            android:id="@+id/image_start_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="    Reproducir"
+            app:backgroundTint="@null"
+            android:background="@drawable/image_start_button"
+            android:textColor="#FF817777"
+            />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_button_login1"
+        android:layout_width="162dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="175dp"
+        android:layout_marginTop="600dp"
+        android:layout_gravity="top|left"
+        android:background="@drawable/container_button_login1">
+
+        <Button
+            android:id="@+id/verVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ver Video"
+            app:backgroundTint="@null"
+            android:background="@drawable/image_start_button1"
+            android:scaleType="centerCrop" />
+
+        <FrameLayout
+            android:id="@+id/container_content1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="67dp"
+            android:layout_marginRight="26.8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="11.78dp">
+
+            <TextView
+                android:id="@+id/text_ver_video"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_marginTop="-0.39dp"
+                android:layout_marginBottom="-0.39dp"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Ver video"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14dp" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_footer"
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="680dp">
+
+        <ImageView
+            android:id="@+id/image_rectangle3"
+            android:layout_width="600dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/image_rectangle4"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/image_new_profile_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="65dp"
+            android:layout_marginRight="65dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/btn_next_button"
+            android:scaleType="centerCrop" />
+
+        <FrameLayout
+            android:id="@+id/container_content2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="150dp"
+            android:layout_marginRight="85dp"
+            android:layout_marginTop="53dp"
+            android:layout_marginBottom="53dp">
+
+            <TextView
+                android:id="@+id/text_aprendamos"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Aprendamos"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14dp" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/image_book_reading"
+        android:layout_width="36dp"
+        android:layout_height="47dp"
+        android:layout_marginLeft="103dp"
+        android:layout_marginTop="715dp"
+        android:layout_gravity="top|left"
+        android:scaleType="centerInside"
+        android:src="@drawable/image_book_reading" />
+
+    <ImageView
+        android:id="@+id/image_speaker"
+        android:layout_width="29dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="181dp"
+        android:layout_marginTop="542dp"
+        android:layout_gravity="top|left"
+        android:scaleType="centerInside"
+        android:src="@drawable/image_speaker" />
+
+    <FrameLayout
+        android:id="@+id/container_character4"
+        android:layout_width="104dp"
+        android:layout_height="109dp"
+        android:layout_marginLeft="237dp"
+        android:layout_marginTop="9dp"
+        android:layout_gravity="top|left">
+
+        <ImageView
+            android:id="@+id/image_bichito"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_bichito" />
+
+        <ImageView
+            android:id="@+id/image_shadow"
+            android:layout_width="54.02dp"
+            android:layout_height="2.53dp"
+            android:layout_marginLeft="37.09dp"
+            android:layout_marginRight="12.9dp"
+            android:layout_marginTop="99.71dp"
+            android:layout_marginBottom="6.76dp"
+            android:background="@drawable/image_shadow"
+            android:scaleType="centerInside" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_button_lateral_menu"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="27dp"
+        android:layout_gravity="top|left">
+
+        <ImageView
+            android:id="@+id/image_ellipse4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="top|left"
+            android:background="@drawable/image_ellipse4"
+            android:scaleType="centerInside" />
+
+        <ImageView
+            android:id="@+id/image_ep_menu"
+            android:layout_width="32dp"
+            android:layout_height="34dp"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/image_ep_menu" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/image_circled_play"
+        android:layout_width="29dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="181dp"
+        android:layout_marginTop="603dp"
+        android:layout_gravity="top|left"
+        android:scaleType="centerInside"
+        android:src="@drawable/image_circled_play" />
+</FrameLayout>
