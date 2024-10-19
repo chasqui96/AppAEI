@@ -92,23 +92,20 @@
                         android:layout_height="138dp"
                         android:layout_marginTop="30dp"
                         android:background="@drawable/tricks">
-
-
-                        <TextView
-                            android:id="@+id/text_imprimir_usuarios"
+                        <Button
+                            android:id="@+id/image_proyectar"
                             android:layout_width="match_parent"
-                            android:layout_height="23dp"
-                            android:layout_marginLeft="63dp"
-                            android:layout_marginRight="63dp"
-                            android:layout_marginTop="88.5dp"
-                            android:layout_marginBottom="26.5dp"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:includeFontPadding="false"
-                            android:maxLines="1"
-                            android:singleLine="true"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/tricks"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:scaleType="centerCrop"
                             android:text="Proyectar Lampara"
-                            android:textColor="#FFFFFFFF"
-                            android:textSize="18dp" />
+                            android:paddingTop="50dp"
+
+                            app:backgroundTint="@null" />
+
+
                     </FrameLayout>
                 </LinearLayout>
 
@@ -184,31 +181,20 @@
                     android:focusable="true">
 
 
-                    <ImageView
+                    <Button
                         android:id="@+id/image_rectangle_games"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/menu_rojo"
-                        android:scaleType="centerCrop"
                         android:clickable="true"
                         android:focusable="true"
-                        />
+                        android:scaleType="centerCrop"
+                        android:text="Retroalimentacion"
+                        android:paddingTop="50dp"
 
-                    <TextView
-                        android:id="@+id/text_retroalimentacion"
-                        android:layout_width="match_parent"
-                        android:layout_height="23dp"
-                        android:layout_marginLeft="56dp"
-                        android:layout_marginRight="54dp"
-                        android:layout_marginTop="89dp"
-                        android:layout_marginBottom="26dp"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:includeFontPadding="false"
-                        android:maxLines="1"
-                        android:singleLine="true"
-                        android:text="Retroalimentación"
-                        android:textColor="#FFFFFFFF"
-                        android:textSize="18dp" />
+                        app:backgroundTint="@null" />
+
+
                 </FrameLayout>
 
                 <ImageView

@@ -79,6 +79,7 @@ class MenuActivity : AppCompatActivity() {
             val intent = Intent(this, FragmentAnimales::class.java)
             startActivity(intent)
         }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

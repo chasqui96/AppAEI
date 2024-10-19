@@ -20,5 +20,6 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/icon_settings"
             android:title="Herramientas" />
+
     </group>
 </menu>

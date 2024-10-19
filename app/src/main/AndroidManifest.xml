@@ -53,8 +53,15 @@
             android:name=".ui.FragmentAnimales"
             android:exported="false"
             android:label="@string/title_activity_menu"/>
+        <activity
+            android:name=".ui.FragmenMenuRetroAlimentacion"
+            android:exported="false"
+            android:label="@string/title_activity_menu"/>
 
-
+        <activity
+            android:name=".ui.ImageActivity"
+            android:exported="false"
+            android:label="@string/title_activity_menu"/>
         <!-- Actividad principal -->
         <activity
             android:name=".ui.LoginpageActivity"

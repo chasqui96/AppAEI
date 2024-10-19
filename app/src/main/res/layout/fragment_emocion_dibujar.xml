@@ -7,6 +7,11 @@
     android:layout_width="match_parent"
     android:layout_height="800dp"
     android:background="@drawable/drawable_shape">
+    <com.example.appaei.ui.DrawingView
+        android:id="@+id/drawing_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <ImageView
         android:layout_width="414dp"
@@ -26,7 +31,7 @@
         android:includeFontPadding="false"
         android:maxLines="1"
         android:singleLine="true"
-        android:text="Los colores"
+        android:text="Las emociones"
         android:textColor="#FFFFFFFF"
         android:textSize="24dp" />
     <TextView
@@ -664,11 +669,7 @@
             android:scaleType="centerInside"
             android:src="@drawable/container_button_lateral_menu_ep_menu" />
     </FrameLayout>
-    <com.example.appaei.ui.DrawingView
-        android:id="@+id/drawing_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+
     <ImageView
         android:layout_width="393dp"
         android:layout_height="347dp"

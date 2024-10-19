@@ -1,5 +1,6 @@
 package com.example.appaei.ui.slideshow
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -7,6 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.appaei.databinding.FragmentSlideshowBinding
+import com.example.appaei.ui.FragmenMenuRetroAlimentacion
+import com.example.appaei.ui.FragmentSentidos
+import com.example.appaei.ui.ImageActivity
 
 class SlideShowFragment : Fragment() {
 
@@ -25,8 +29,14 @@ class SlideShowFragment : Fragment() {
         val root: View = binding.root
 
         // Configura el botón para registrar un log al hacer clic
-        binding.irretroalimentacion.setOnClickListener {
-            Log.d("SlideShowFragment", "El botón fue presionado.")
+        binding.imageRectangleGames.setOnClickListener {
+            val intent = Intent(activity, FragmenMenuRetroAlimentacion::class.java)
+            startActivity(intent)
+        }
+
+        binding.imageProyectar.setOnClickListener {
+            val intent = Intent(activity, ImageActivity::class.java)
+            startActivity(intent)
         }
 
         return root
