@@ -1,197 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container_herramientas"
     android:layout_width="match_parent"
-    android:layout_height="800dp"
-   >
+    tools:context=".ui.slideshow.SlideShowFragment"
+    android:layout_height="match_parent"
+    android:id="@+id/container_herramientas">
 
-    <ImageView
-        android:id="@+id/image_vector"
-        android:layout_width="410dp"
-        android:layout_height="209dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/image_vector" />
-    <TextView
-        android:id="@+id/d"
-        android:layout_width="147dp"
-        android:layout_height="60.24dp"
-        android:layout_gravity="top|left"
-        android:layout_marginLeft="101dp"
-        android:layout_marginTop="33.38dp"
-        android:layout_marginBottom="-1.62dp"
-        android:gravity="left|center_vertical"
-        android:includeFontPadding="false"
-        android:lineHeight="30.24dp"
-        android:maxLines="2"
-        android:text="Herramientas"
-        android:textColor="#FFFFFFFF"
-        android:textSize="24dp" />
     <LinearLayout
-        android:id="@+id/container_sections"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="250dp"
-        android:layout_gravity="top|left"
-        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
         android:orientation="vertical">
 
-        <FrameLayout
-            android:id="@+id/container_section_basic_topics"
-            android:layout_width="295dp"
-            android:layout_height="138dp"
-            android:background="@drawable/games">
-
-
-
-            <TextView
-                android:id="@+id/text_imprimir_funcionalidades"
-                android:layout_width="match_parent"
-                android:layout_height="23dp"
-                android:layout_marginLeft="28dp"
-                android:layout_marginRight="26dp"
-                android:layout_marginTop="93dp"
-                android:layout_marginBottom="22dp"
-                android:gravity="center"
-                android:includeFontPadding="false"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:text="Impirmir Funcionalidades "
-                android:textColor="#FFFFFFFF"
-                android:textSize="18dp" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:id="@+id/container_section_tricks"
-            android:layout_width="295dp"
-            android:layout_height="138dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/tricks">
-
-
-            <TextView
-                android:id="@+id/text_imprimir_usuarios"
-                android:layout_width="match_parent"
-                android:layout_height="23dp"
-                android:layout_marginLeft="63dp"
-                android:layout_marginRight="63dp"
-                android:layout_marginTop="88.5dp"
-                android:layout_marginBottom="26.5dp"
-                android:gravity="center_horizontal|center_vertical"
-                android:includeFontPadding="false"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:text="Imprimir Usuarios"
-                android:textColor="#FFFFFFFF"
-                android:textSize="18dp" />
-        </FrameLayout>
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/image_print"
-        android:layout_width="69dp"
-        android:layout_height="69dp"
-        android:layout_marginLeft="141dp"
-        android:layout_marginTop="262dp"
-        android:layout_gravity="top|left"
-        android:scaleType="centerInside"
-        android:src="@drawable/Print" />
-
-    <ImageView
-        android:id="@+id/image_print1"
-        android:layout_width="69dp"
-        android:layout_height="69dp"
-        android:layout_marginLeft="146dp"
-        android:layout_marginTop="432dp"
-        android:layout_gravity="top|left"
-        android:scaleType="centerInside"
-        android:src="@drawable/Print" />
-
-    <LinearLayout
-        android:id="@+id/container_quiz_info_section"
-        android:layout_width="289dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="21dp"
-        android:layout_marginTop="26dp"
-        android:layout_gravity="top|left"
-        android:clipToPadding="false"
-        android:gravity="left|center_vertical"
-        android:orientation="horizontal">
-
-        <FrameLayout
-            android:id="@+id/container_button_lateral_menu"
-            android:layout_width="60dp"
-            android:layout_height="60dp">
-
-            <ImageView
-                android:id="@+id/image_ellipse"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="top|left"
-                android:background="@drawable/container_button_lateral_menu_ellipse"
-                android:scaleType="centerInside" />
-
-            <ImageView
-                android:id="@+id/image_ep_menu"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_gravity="top|left"
-                android:scaleType="centerInside"
-                android:src="@drawable/image_ep_menu" />
-        </FrameLayout>
-        <!-- 59:281:space-view0 quiz-info-Section_space_view0 space-view -->
-
-
-
-
-    </LinearLayout>
-
-    <FrameLayout
-        android:id="@+id/container_section_games"
-        android:layout_width="295dp"
-        android:layout_height="138dp"
-        android:layout_marginLeft="34dp"
-        android:layout_marginTop="595dp"
-        android:layout_gravity="top|left"
-        >
-
-        <ImageView
-            android:id="@+id/image_rectangle_games"
+        <ScrollView
+            android:id="@+id/scrollView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/menu_rojo"
-            android:scaleType="centerCrop" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingTop="1dp">
 
-        <TextView
-            android:id="@+id/text_retroalimentacion"
-            android:layout_width="match_parent"
-            android:layout_height="23dp"
-            android:layout_marginLeft="56dp"
-            android:layout_marginRight="54dp"
-            android:layout_marginTop="89dp"
-            android:layout_marginBottom="26dp"
-            android:gravity="center_horizontal|center_vertical"
-            android:includeFontPadding="false"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:text="Retroalimentación"
-            android:textColor="#FFFFFFFF"
-            android:textSize="18dp" />
-    </FrameLayout>
 
-    <ImageView
-        android:id="@+id/image_tuition"
-        android:layout_width="91dp"
-        android:layout_height="79dp"
-        android:layout_marginLeft="137dp"
-        android:layout_marginTop="605dp"
-        android:layout_gravity="top|left"
-        android:scaleType="centerInside"
-        android:src="@drawable/Tuition" />
-</FrameLayout>
+
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+
+                >
+
+                <ImageView
+                    android:id="@+id/image_vector"
+                    android:layout_width="410dp"
+                    android:layout_height="209dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_vector" />
+                <TextView
+                    android:id="@+id/d"
+                    android:layout_width="147dp"
+                    android:layout_height="60.24dp"
+                    android:layout_gravity="top|left"
+                    android:layout_marginLeft="101dp"
+                    android:layout_marginTop="33.38dp"
+                    android:layout_marginBottom="-1.62dp"
+                    android:gravity="left|center_vertical"
+                    android:includeFontPadding="false"
+                    android:lineHeight="30.24dp"
+                    android:maxLines="2"
+                    android:text="Herramientas"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="24dp" />
+                <LinearLayout
+                    android:id="@+id/container_sections"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="250dp"
+                    android:layout_gravity="top|left"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/container_section_basic_topics"
+                        android:layout_width="295dp"
+                        android:layout_height="138dp"
+                        android:background="@drawable/games">
+
+
+
+                        <TextView
+                            android:id="@+id/text_imprimir_funcionalidades"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:layout_marginLeft="28dp"
+                            android:layout_marginRight="26dp"
+                            android:layout_marginTop="93dp"
+                            android:layout_marginBottom="22dp"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="Impirmir Funcionalidades "
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="18dp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/container_section_tricks"
+                        android:layout_width="295dp"
+                        android:layout_height="138dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/tricks">
+
+
+                        <TextView
+                            android:id="@+id/text_imprimir_usuarios"
+                            android:layout_width="match_parent"
+                            android:layout_height="23dp"
+                            android:layout_marginLeft="63dp"
+                            android:layout_marginRight="63dp"
+                            android:layout_marginTop="88.5dp"
+                            android:layout_marginBottom="26.5dp"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="Proyectar Lampara"
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="18dp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/image_print"
+                    android:layout_width="69dp"
+                    android:layout_height="69dp"
+                    android:layout_marginLeft="141dp"
+                    android:layout_marginTop="262dp"
+                    android:layout_gravity="top|left"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/print" />
+
+                <ImageView
+                    android:id="@+id/image_print1"
+                    android:layout_width="69dp"
+                    android:layout_height="69dp"
+                    android:layout_marginLeft="146dp"
+                    android:layout_marginTop="432dp"
+                    android:layout_gravity="top|left"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/lampara" />
+
+                <LinearLayout
+                    android:id="@+id/container_quiz_info_section"
+                    android:layout_width="289dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_gravity="top|left"
+                    android:clipToPadding="false"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/container_button_lateral_menu"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp">
+
+                        <ImageView
+                            android:id="@+id/image_ellipse"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="top|left"
+                            android:background="@drawable/container_button_lateral_menu_ellipse"
+                            android:scaleType="centerInside" />
+
+                        <ImageView
+                            android:id="@+id/image_ep_menu"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_gravity="top|left"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/image_ep_menu" />
+                    </FrameLayout>
+                    <!-- 59:281:space-view0 quiz-info-Section_space_view0 space-view -->
+
+
+
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/irretroalimentacion"
+                    android:layout_width="295dp"
+                    android:layout_height="138dp"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginTop="595dp"
+                    android:layout_gravity="top|left"
+                    android:clickable="true"
+                    android:focusable="true">
+
+
+                    <ImageView
+                        android:id="@+id/image_rectangle_games"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/menu_rojo"
+                        android:scaleType="centerCrop"
+                        android:clickable="true"
+                        android:focusable="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/text_retroalimentacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="56dp"
+                        android:layout_marginRight="54dp"
+                        android:layout_marginTop="89dp"
+                        android:layout_marginBottom="26dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="Retroalimentación"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="18dp" />
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/image_tuition"
+                    android:layout_width="91dp"
+                    android:layout_height="79dp"
+                    android:layout_marginLeft="137dp"
+                    android:layout_marginTop="605dp"
+                    android:layout_gravity="top|left"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/tuition" />
+            </FrameLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

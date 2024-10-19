@@ -714,7 +714,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="199dp"
         android:scaleType="centerInside"
-        android:src="@drawable/verderok" />
+        android:src="@drawable/cerdoimagen" />
 
     <FrameLayout
         android:id="@+id/container_button_login"
