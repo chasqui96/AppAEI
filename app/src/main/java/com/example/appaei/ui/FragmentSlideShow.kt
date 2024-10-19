@@ -1,22 +1,31 @@
 package com.example.appaei.ui
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.LayoutInflater
 import android.view.Menu
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.navigation.NavigationView
+import android.view.View
+import android.view.ViewGroup
+import android.widget.FrameLayout
+import android.widget.ImageView
+import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.appcompat.app.AppCompatActivity
 import com.example.appaei.R
 import com.example.appaei.databinding.ActivityMenuBinding
-import android.content.Intent
-import android.widget.LinearLayout
+import com.example.appaei.databinding.FragmentHomeBinding
+import com.google.android.material.navigation.NavigationView
 
-class MenuActivity : AppCompatActivity() {
+
+class FragmentSlideShow  : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMenuBinding
@@ -43,42 +52,14 @@ class MenuActivity : AppCompatActivity() {
         //setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         //supportActionBar?.setHomeAsUpIndicator(R.drawable.vector)// Usa tu nuevo ícono aquí
-        val irVocales = findViewById<LinearLayout>(R.id.Linear6)
+        val irVocales = findViewById<ImageView>(R.id.image_rectangle_games)
         irVocales.setOnClickListener {
-            // Navegar a la actividad de carrusel
-            val intent = Intent(this, FramentVocales::class.java)
-            startActivity(intent)
-        }
-        val irHigiene = findViewById<LinearLayout>(R.id.Linear9)
-        irHigiene.setOnClickListener {
-            // Navegar a la actividad de carrusel
-            val intent = Intent(this, FragmentHigiene::class.java)
-            startActivity(intent)
-        }
-        val irColores = findViewById<LinearLayout>(R.id.Linear5)
-        irColores.setOnClickListener {
-            // Navegar a la actividad de carrusel
-            val intent = Intent(this, FragmentColores::class.java)
-            startActivity(intent)
-        }
-        val irSentidos = findViewById<LinearLayout>(R.id.Linear11)
-        irSentidos.setOnClickListener {
+            Log.d("aqui","aqui")
             // Navegar a la actividad de carrusel
             val intent = Intent(this, FragmentSentidos::class.java)
             startActivity(intent)
         }
-        val irEmociones = findViewById<LinearLayout>(R.id.Linear12)
-        irEmociones.setOnClickListener {
-            // Navegar a la actividad de carrusel
-            val intent = Intent(this, FragmentEmociones::class.java)
-            startActivity(intent) 
-        }
-        val irAnimales= findViewById<LinearLayout>(R.id.Linear8)
-        irAnimales.setOnClickListener {
-            // Navegar a la actividad de carrusel
-            val intent = Intent(this, FragmentAnimales::class.java)
-            startActivity(intent)
-        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

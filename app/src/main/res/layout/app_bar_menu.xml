@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".ui.MenuActivity">
 
+    <!-- Elimina o comenta esta sección si no quieres la AppBarLayout y Toolbar -->
+    <!--
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,9 +21,8 @@
             app:popupTheme="@style/Theme.MyApp.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
+    -->
 
     <include layout="@layout/content_menu" />
-
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

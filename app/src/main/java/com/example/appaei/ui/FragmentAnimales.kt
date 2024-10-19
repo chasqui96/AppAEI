@@ -12,6 +12,7 @@ class FragmentAnimales: AppCompatActivity() {
 
         // Crea una lista de fragmentos para cada vocal
         val fragments = listOf(
+            FragmentAnimalPrimero(),
             FragmentAnimalPerro(),
             FragmentAnimalGato(),
             FragmentAnimalVaca(),

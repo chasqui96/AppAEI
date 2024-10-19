@@ -26,7 +26,7 @@
         android:includeFontPadding="false"
         android:maxLines="1"
         android:singleLine="true"
-        android:text="Las colores"
+        android:text="Los colores"
         android:textColor="#FFFFFFFF"
         android:textSize="24dp" />
 
