@@ -16,7 +16,8 @@ class FragmentAnimales: AppCompatActivity() {
             FragmentAnimalPerro(),
             FragmentAnimalGato(),
             FragmentAnimalVaca(),
-            FragmentAnimalGallo()
+            FragmentAnimalGallo(),
+            FragmentAnimalChancho()
         )
 
         // Configura el ViewPager con el adaptador

@@ -41,6 +41,12 @@ class LoginpageActivity : BaseActivity<ActivityLoginpageBinding>(R.layout.activi
     binding.btnIngresar.setOnClickListener {
       viewModel.onLoginClicked()
     }
+    binding.btnCrearUsuario.setOnClickListener {
+      // Inicia la nueva Activity
+      val intent = Intent(this, RegisterActivity::class.java)
+      startActivity(intent)
+    }
+
   }
 
   private fun setupUI() {

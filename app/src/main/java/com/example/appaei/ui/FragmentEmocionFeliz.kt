@@ -25,7 +25,7 @@ class FragmentEmocionFeliz : Fragment() {
         val playButton: Button = view.findViewById(R.id.image_start_button)
 
         // Inicializa el MediaPlayer con el archivo de sonido
-        mediaPlayer = MediaPlayer.create(context, R.raw.gusto)
+        mediaPlayer = MediaPlayer.create(context, R.raw.felicidad)
 
         // Configura el evento onClick del botón
         playButton.setOnClickListener {

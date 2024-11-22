@@ -27,5 +27,11 @@
         android:id="@+id/nav_vocal_a"
         android:name="com.example.appaei.ui.FragmentVocalA"
         tools:layout="@layout/fragment_vocal_a" />
+    <fragment
+        android:id="@+id/nav_lista_user"
+        android:name="com.example.appaei.ui.FragmentListarUser"
+        android:label="Lista de Usuarios"
+        tools:layout="@layout/fragment_listar_user" />
+
 
 </navigation>

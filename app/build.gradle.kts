@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -82,6 +84,9 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.firebase.firestore.ktx)
+    implementation("com.google.firebase:firebase-firestore-ktx:24.6.0")
+    implementation("com.google.firebase:firebase-auth-ktx:21.6.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -113,5 +118,10 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.9.0")
-
+    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")  // Dependencia para ConstraintLayout
+    implementation ("androidx.cardview:cardview:1.0.")
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+    implementation ("androidx.appcompat:appcompat:1.4.0")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0") // Si usas ViewModel
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0") // Si usas LiveData
 }

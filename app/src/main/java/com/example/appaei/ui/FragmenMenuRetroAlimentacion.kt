@@ -53,7 +53,7 @@ class FragmenMenuRetroAlimentacion : AppCompatActivity() {
         val irColores = findViewById<LinearLayout>(R.id.Linear5)
         irColores.setOnClickListener {
             setButtonsEnabled(false)
-            val fragmentColorGris = FragmentColorGris()
+            val fragmentColorGris = ColorGuessFragment()
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, fragmentColorGris) // Cambia el ID al contenedor correcto
                 .addToBackStack(null) // Permite volver al fragmento anterior

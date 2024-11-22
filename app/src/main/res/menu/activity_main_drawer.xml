@@ -21,5 +21,10 @@
             android:icon="@drawable/icon_settings"
             android:title="Herramientas" />
 
+        <item
+            android:id="@+id/nav_lista_user"
+            android:icon="@drawable/icon_about"
+            android:title="Herramientas" />
+
     </group>
 </menu>

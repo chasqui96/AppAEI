@@ -15,6 +15,11 @@
         android:theme="@style/Theme.MyApp"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.RegisterActivity"
+            android:exported="false"
+            android:label="RegisterActivity"
+            android:theme="@style/Theme.MyApp.NoActionBar" />
+        <activity
             android:name=".ui.MenuActivity"
             android:exported="false"
             android:label="@string/title_activity_menu"
@@ -62,11 +67,13 @@
             android:name=".ui.ImageActivity"
             android:exported="false"
             android:label="@string/title_activity_menu"/>
+
         <!-- Actividad principal -->
         <activity
             android:name=".ui.LoginpageActivity"
             android:exported="true"
             android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

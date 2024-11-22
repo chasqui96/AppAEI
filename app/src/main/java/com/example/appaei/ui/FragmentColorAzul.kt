@@ -45,7 +45,7 @@ class FragmentColorAzul:Fragment() {
         val openLocalButton: Button = view.findViewById(R.id.open_dialog_button_color_verde)
         openLocalButton.setOnClickListener {
             val videoUri =
-                Uri.parse("android.resource://" + requireContext().packageName + "/" + R.raw.color_rojo)
+                Uri.parse("android.resource://" + requireContext().packageName + "/" + R.raw.color_azul_video)
             showLocalVideoDialog(videoUri)
         }
 

@@ -52,7 +52,7 @@ class FragmentEmocionPrimero : Fragment() {
         // Botón para abrir un video de YouTube
         val openYouTubeButton: Button = view.findViewById(R.id.verVideo)
         openYouTubeButton.setOnClickListener {
-            val videoUrl = "7crTAT80r2I"  // Ejemplo de URL de YouTube
+            val videoUrl = "RGqSPLSOFwU"  // Ejemplo de URL de YouTube
             showYouTubeVideoDialog(videoUrl)
         }
 

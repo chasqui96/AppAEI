@@ -16,7 +16,8 @@ class FragmentColores : AppCompatActivity() {
             FragmentColorVerde(),
             FragmentColorRojo(),
             FragmentColorAzul(),
-            FragmentColorAmarillo()
+            FragmentColorAmarillo(),
+            FragmentColorVarios()
 
         )
         // Configura el ViewPager con el adaptador
