@@ -37,6 +37,7 @@ class FragmenMenuRetroAlimentacion : AppCompatActivity() {
                 .replace(R.id.fragment_container, fragmentvocales) // Cambia el ID al contenedor correcto
                 .addToBackStack(null) // Permite volver al fragmento anterior
                 .commit() // Ejecuta la transacción
+
         }
 
         val irHigiene = findViewById<LinearLayout>(R.id.Linear9)
@@ -79,7 +80,7 @@ class FragmenMenuRetroAlimentacion : AppCompatActivity() {
         val irAnimales= findViewById<LinearLayout>(R.id.Linear8)
         irAnimales.setOnClickListener {
             setButtonsEnabled(false)
-            val fragmentanimales = FragmentAnimalPrimero()
+            val fragmentanimales = FragmentFeedBackAnimales()
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, fragmentanimales) // Cambia el ID al contenedor correcto
                 .addToBackStack(null) // Permite volver al fragmento anterior
@@ -108,6 +109,7 @@ class FragmenMenuRetroAlimentacion : AppCompatActivity() {
     }
     override fun onBackPressed() {
         super.onBackPressed()
+        finish()
         // Habilitar los botones al volver atrás
         setButtonsEnabled(true)
     }

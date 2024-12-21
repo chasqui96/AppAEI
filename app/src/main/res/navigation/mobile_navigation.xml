@@ -33,5 +33,18 @@
         android:label="Lista de Usuarios"
         tools:layout="@layout/fragment_listar_user" />
 
+    <fragment
+        android:id="@+id/nav_lista_resultado"
+        android:name="com.example.appaei.ui.FragmentResultados"
+        android:label="Lista Resultado"
+        tools:layout="@layout/fragment_listar_user" />
+
+    <fragment
+        android:id="@+id/nav_config_ip"
+        android:name="com.example.appaei.ui.ConfigurarIpFragment"
+        android:label="Config. IP"
+        tools:layout="@layout/fragment_configurar_ip" />
+
+
 
 </navigation>

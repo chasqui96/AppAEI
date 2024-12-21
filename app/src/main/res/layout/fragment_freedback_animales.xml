@@ -1,0 +1,50 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Instrucción en texto -->
+    <TextView
+        android:id="@+id/textoInstruccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡Arrastra el animal a su sonido!"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black" />
+
+    <!-- Contenedor de imágenes -->
+    <LinearLayout
+        android:id="@+id/imagenesAnimales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Cuadros para soltar -->
+    <LinearLayout
+        android:id="@+id/cuadrosSoltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="300dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Botón para reproducir sonido -->
+    <Button
+        android:id="@+id/btnSonido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reproducir sonido"
+        android:layout_below="@id/cuadrosSoltar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/amber_600"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

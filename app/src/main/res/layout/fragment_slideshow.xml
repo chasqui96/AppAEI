@@ -67,23 +67,20 @@
                         android:layout_height="138dp"
                         android:background="@drawable/games">
 
-
-
-                        <TextView
-                            android:id="@+id/text_imprimir_funcionalidades"
+                        <Button
+                            android:id="@+id/imprimir_pdf"
                             android:layout_width="match_parent"
-                            android:layout_height="23dp"
-                            android:layout_marginLeft="28dp"
-                            android:layout_marginRight="26dp"
-                            android:layout_marginTop="93dp"
-                            android:layout_marginBottom="22dp"
-                            android:gravity="center"
-                            android:includeFontPadding="false"
-                            android:maxLines="1"
-                            android:singleLine="true"
-                            android:text="Impirmir Funcionalidades "
-                            android:textColor="#FFFFFFFF"
-                            android:textSize="18dp" />
+                            android:layout_height="match_parent"
+                            android:background="@drawable/drawable_amber"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:paddingTop="50dp"
+                            android:scaleType="centerCrop"
+                            android:text="Impirmir Funcionalidades"
+
+                            app:backgroundTint="@null" />
+
+
                     </FrameLayout>
 
                     <FrameLayout
@@ -92,6 +89,7 @@
                         android:layout_height="138dp"
                         android:layout_marginTop="30dp"
                         android:background="@drawable/tricks">
+
                         <Button
                             android:id="@+id/image_proyectar"
                             android:layout_width="match_parent"
@@ -99,9 +97,9 @@
                             android:background="@drawable/tricks"
                             android:clickable="true"
                             android:focusable="true"
+                            android:paddingTop="50dp"
                             android:scaleType="centerCrop"
                             android:text="Proyectar Lampara"
-                            android:paddingTop="50dp"
 
                             app:backgroundTint="@null" />
 
@@ -188,9 +186,9 @@
                         android:background="@drawable/menu_rojo"
                         android:clickable="true"
                         android:focusable="true"
+                        android:paddingTop="50dp"
                         android:scaleType="centerCrop"
                         android:text="Retroalimentacion"
-                        android:paddingTop="50dp"
 
                         app:backgroundTint="@null" />
 

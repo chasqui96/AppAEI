@@ -57,8 +57,6 @@ class FragmentHigieneUno : Fragment() {
             showYouTubeVideoDialog(videoUrl)
         }
 
-
-
         return view
     }
     private fun showLocalVideoDialog(videoUri: Uri) {

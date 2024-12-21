@@ -14,7 +14,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.appaei.R
 import com.example.appaei.databinding.ActivityMenuBinding
 import android.content.Intent
+import android.view.MenuItem
 import android.widget.LinearLayout
+import android.widget.Toast
 
 class MenuActivity : AppCompatActivity() {
 
@@ -91,5 +93,21 @@ class MenuActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_menu)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+
+            R.id.cerrarSession -> {
+                // Manejar el cierre de sesión aquí
+                Toast.makeText(this, "Sesión cerrada", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.action_settings -> {
+                // Manejar otras configuraciones aquí
+                Toast.makeText(this, "Configuración abierta", Toast.LENGTH_SHORT).show()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

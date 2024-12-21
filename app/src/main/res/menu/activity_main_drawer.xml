@@ -19,12 +19,15 @@
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/icon_settings"
-            android:title="Herramientas" />
+            android:title="Retroalimentacion" />
+
+
 
         <item
-            android:id="@+id/nav_lista_user"
-            android:icon="@drawable/icon_about"
-            android:title="Herramientas" />
+            android:id="@+id/nav_config_ip"
+            android:icon="@drawable/icon_settings"
+            android:title="Config. IP" />
+
 
     </group>
 </menu>

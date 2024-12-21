@@ -1,5 +1,7 @@
 package com.example.appaei.ui
 
+import android.app.ProgressDialog
+import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
@@ -29,11 +31,11 @@ class ImageActivity : AppCompatActivity() {
         R.drawable.animal_leon,
         R.drawable.animal_mono,
         R.drawable.animal_perro,
-        R.drawable.vocal_a,
-        R.drawable.vocal_e,
-        R.drawable.vocal_i,
-        R.drawable.vocal_o,
-        R.drawable.vocal_u
+        R.drawable.imagen_letra_a,
+        R.drawable.imagen_letra_e,
+        R.drawable.imagen_letra_i,
+        R.drawable.imagen_letra_o,
+        R.drawable.imagen_letra_u
     )
     var currentIndex = 0
 
@@ -41,23 +43,30 @@ class ImageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_proyectar_imagen)
 
+        // Obtener IP del servidor desde SharedPreferences
+        val sharedPreferences = getSharedPreferences("AppSettings", Context.MODE_PRIVATE)
+        val serverIp = sharedPreferences.getString("server_ip", null)
+
+        if (serverIp == null) {
+            Toast.makeText(this, "Por favor, configura la dirección IP en los ajustes", Toast.LENGTH_LONG).show()
+            finish() // Cierra la actividad si no hay IP configurada
+            return
+        }
+
         val imageView: ImageView = findViewById(R.id.imageView)
         val nextButton: Button = findViewById(R.id.nextButton)
 
-        // Mostrar la primera imagen
         imageView.setImageResource(imageResources[currentIndex])
 
         nextButton.setOnClickListener {
-            // Cambiar a la siguiente imagen
             currentIndex = (currentIndex + 1) % imageResources.size
             imageView.setImageResource(imageResources[currentIndex])
 
-            // Enviar la imagen al servidor
-            sendImageToServer(imageResources[currentIndex])
+            sendImageToServer(serverIp, imageResources[currentIndex])
         }
     }
 
-    fun sendImageToServer(imageRes: Int) {
+    fun sendImageToServer(serverIp: String, imageRes: Int) {
         val bitmap = BitmapFactory.decodeResource(resources, imageRes)
         val file = File(applicationContext.cacheDir, "image.jpg")
         val outputStream = FileOutputStream(file)
@@ -67,29 +76,31 @@ class ImageActivity : AppCompatActivity() {
 
         val requestFile = file.asRequestBody("image/jpeg".toMediaTypeOrNull())
         val body = MultipartBody.Part.createFormData("file", file.name, requestFile)
-
+        val progressDialog = ProgressDialog(this)
+        progressDialog.setMessage("PROYECTANDO..")
+        progressDialog.setCancelable(false)
+        progressDialog.show()
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://192.168.31.214:5000")
+            .baseUrl("http://$serverIp:5000/") // Usar la IP configurada
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
         val apiService = retrofit.create(ApiService::class.java)
         apiService.uploadImage(body).enqueue(object : Callback<ResponseBody> {
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
+                progressDialog.dismiss()
                 if (response.isSuccessful) {
-                    // Muestra un mensaje si la imagen se envió correctamente
                     Toast.makeText(this@ImageActivity, "Imagen Proyectada correctamente", Toast.LENGTH_SHORT).show()
                 } else {
-                    // Muestra un mensaje si hubo algún error en la respuesta
                     Toast.makeText(this@ImageActivity, "Error en la respuesta del servidor", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
-                // Error en el envío (problema de red o servidor)
+                progressDialog.dismiss()
                 Toast.makeText(this@ImageActivity, "Error en el envío: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
-
     }
+
 }

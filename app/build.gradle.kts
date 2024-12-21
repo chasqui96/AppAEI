@@ -87,6 +87,8 @@ dependencies {
     implementation(libs.firebase.firestore.ktx)
     implementation("com.google.firebase:firebase-firestore-ktx:24.6.0")
     implementation("com.google.firebase:firebase-auth-ktx:21.6.0")
+    implementation ("com.google.firebase:firebase-database:20.1.0")
+    implementation(libs.firebase.database.ktx)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -124,4 +126,7 @@ dependencies {
     implementation ("androidx.appcompat:appcompat:1.4.0")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0") // Si usas ViewModel
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0") // Si usas LiveData
+    implementation ("androidx.recyclerview:recyclerview:1.2.1") // O la versión más reciente
+
+
 }
