@@ -1,30 +1,9 @@
+import { findRateOnLabelLine, findResumenValue, lastNumberTokenDot, toIsoDate } from './common';
 import { ExtractoParseado, ResumenFinanciero, Transaccion } from './types';
 
 const TX_START = /^(\d{2}\/\d{2}\/\d{2,4})\s+(\d{2}\/\d{2}\/\d{2,4})\s+(\S+)\s+(.+)$/;
 
-function parseAmount(raw: string): number {
-  const negative = raw.trim().startsWith('-');
-  const cleaned = raw.replace(/[^\d,.\-]/g, '');
-  const normalized = cleaned.includes(',')
-    ? cleaned.replace(/\./g, '').replace(',', '.')
-    : cleaned.replace(/\./g, '');
-  const value = Math.abs(parseFloat(normalized));
-  return negative ? -value : value;
-}
-
-function toIsoDate(ddmmyy: string): string {
-  const [d, m, y] = ddmmyy.split('/');
-  const year = y.length === 2 ? `20${y}` : y;
-  return `${year}-${m.padStart(2, '0')}-${d.padStart(2, '0')}`;
-}
-
-function lastNumberToken(line: string): { value: number; index: number } | null {
-  const match = line.match(/(-?\d{1,3}(?:\.\d{3})*)\s*$/);
-  if (!match) return null;
-  return { value: parseAmount(match[1]), index: match.index ?? line.length };
-}
-
-function parseTransactionLine(fecha: string, rest: string): { comercio: string; monto: number | null; esPago: boolean } {
+function parseTransactionLine(rest: string): { comercio: string; monto: number | null; esPago: boolean } {
   let body = rest.trim();
   let esPago = false;
 
@@ -33,7 +12,7 @@ function parseTransactionLine(fecha: string, rest: string): { comercio: string; 
     body = body.replace(/\sCR$/, '').trim();
   }
 
-  const montoMatch = lastNumberToken(body);
+  const montoMatch = lastNumberTokenDot(body);
   let monto: number | null = null;
   if (montoMatch) {
     monto = montoMatch.value;
@@ -57,7 +36,7 @@ export function parseContinentalTransacciones(lines: string[]): Transaccion[] {
     if (match) {
       pending = null;
       const [, fechaOperacion, , , rest] = match;
-      const { comercio, monto, esPago } = parseTransactionLine(fechaOperacion, rest);
+      const { comercio, monto, esPago } = parseTransactionLine(rest);
       if (!comercio) continue;
 
       const tx: Transaccion = {
@@ -76,7 +55,7 @@ export function parseContinentalTransacciones(lines: string[]): Transaccion[] {
     }
 
     if (pending) {
-      const found = lastNumberToken(line);
+      const found = lastNumberTokenDot(line);
       if (found) {
         pending.monto = found.value;
         transacciones.push(pending);
@@ -88,37 +67,27 @@ export function parseContinentalTransacciones(lines: string[]): Transaccion[] {
   return transacciones;
 }
 
-function findValueAfterLabel(lines: string[], labelMatch: (line: string) => boolean): number | null {
-  const idx = lines.findIndex(labelMatch);
-  if (idx === -1 || idx + 1 >= lines.length) return null;
-  const found = lastNumberToken(lines[idx + 1]);
-  return found ? found.value : null;
-}
-
-function findValueOnLabelLine(lines: string[], regex: RegExp): number | null {
-  for (const line of lines) {
-    const match = line.match(regex);
-    if (match) return parseAmount(match[1]);
-  }
-  return null;
-}
-
 export function parseContinentalResumen(lines: string[]): ResumenFinanciero {
-  const deudaAnterior = findValueAfterLabel(lines, (l) => l.includes('Deuda Anterior'));
-  const pagos = findValueAfterLabel(lines, (l) => /\(-\)\s*Pagos/.test(l));
-  const saldoFinanciado = findValueAfterLabel(lines, (l) => l.includes('Saldo Financiado'));
-  const comprasDelMes = findValueAfterLabel(lines, (l) => /Compra.*cargos del mes/.test(l));
-  const deudaTotalPeriodo = findValueAfterLabel(lines, (l) => l.includes('DEUDA TOTAL DEL PERIODO'));
-  const deudaCuotasFacturar = findValueAfterLabel(lines, (l) => l.includes('Deuda en Cuotas a facturar'));
-  const deudaTotal = findValueAfterLabel(
+  const deudaAnterior = findResumenValue(lines, (l) => l.includes('Deuda Anterior'), lastNumberTokenDot);
+  const pagos = findResumenValue(lines, (l) => /\(-\)\s*Pagos/.test(l), lastNumberTokenDot);
+  const saldoFinanciado = findResumenValue(lines, (l) => l.includes('Saldo Financiado'), lastNumberTokenDot);
+  const comprasDelMes = findResumenValue(lines, (l) => /Compras?\s+y?\s*cargos del mes/i.test(l), lastNumberTokenDot);
+  const deudaTotalPeriodo = findResumenValue(lines, (l) => l.includes('DEUDA TOTAL DEL PERIODO'), lastNumberTokenDot);
+  const deudaCuotasFacturar = findResumenValue(
     lines,
-    (l) => l.includes('DEUDA TOTAL') && !l.includes('PERIODO')
+    (l) => l.includes('Deuda en Cuotas a facturar'),
+    lastNumberTokenDot
+  );
+  const deudaTotal = findResumenValue(
+    lines,
+    (l) => l.includes('DEUDA TOTAL') && !l.includes('PERIODO'),
+    lastNumberTokenDot
   );
 
   const pagoMinimoLineIdx = lines.findIndex((l) => l.includes('Pago mínimo'));
   let pagoMinimo: number | null = null;
   if (pagoMinimoLineIdx !== -1 && pagoMinimoLineIdx + 1 < lines.length) {
-    const found = lastNumberToken(lines[pagoMinimoLineIdx + 1]);
+    const found = lastNumberTokenDot(lines[pagoMinimoLineIdx + 1]);
     pagoMinimo = found ? found.value : null;
   }
 
@@ -131,8 +100,8 @@ export function parseContinentalResumen(lines: string[]): ResumenFinanciero {
     }
   }
 
-  const tan = findValueOnLabelLine(lines, /T\.A\.N[^0-9]*(\d+,\d+)/);
-  const tae = findValueOnLabelLine(lines, /T\.A\.E[^0-9]*(\d+,\d+)/);
+  const tan = findRateOnLabelLine(lines, /T\.A\.N[^0-9]*(\d+,\d+)/);
+  const tae = findRateOnLabelLine(lines, /T\.A\.E[^0-9]*(\d+,\d+)/);
 
   return {
     deudaAnterior,
