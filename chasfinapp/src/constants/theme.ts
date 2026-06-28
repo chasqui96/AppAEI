@@ -16,15 +16,38 @@ export const Colors = {
     textSecondary: '#60646C',
   },
   dark: {
-    text: '#ffffff',
-    background: '#000000',
-    backgroundElement: '#212225',
-    backgroundSelected: '#2E3135',
-    textSecondary: '#B0B4BA',
+    text: '#F2F4F1',
+    background: '#0E1410',
+    backgroundElement: '#161D18',
+    backgroundSelected: '#2A352E',
+    textSecondary: '#8FA396',
   },
 } as const;
 
 export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
+
+/** "Fintech premium" accent palette used for charts and highlighted figures. */
+export const Accent = {
+  border: '#2A352E',
+  greenDark: '#5B8C5A',
+  greenLight: '#8FC17E',
+  terracottaDark: '#C97B4A',
+  terracottaLight: '#E0A36E',
+  gold: '#D4B26A',
+  danger: '#D46A6A',
+} as const;
+
+/** Rotating palette used to assign a distinct color to each spending category. */
+export const CategoriaColors = [
+  Accent.greenLight,
+  Accent.terracottaLight,
+  Accent.gold,
+  Accent.greenDark,
+  Accent.terracottaDark,
+  '#6A9FD4',
+  '#B06AD4',
+  '#D4C76A',
+] as const;
 
 export const Fonts = Platform.select({
   ios: {
